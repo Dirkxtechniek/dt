@@ -1,0 +1,226 @@
+/* =========================================
+   Algemene stijlen
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Introductie sectie */
+.intro {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0077cc;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/* Typografie */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Links */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005490;
+}
+
+/* =========================================
+   Header
+========================================= */
+/* Header */
+header {
+    background: linear-gradient(135deg, #0077cc, #00aaff);
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #005999;
+    color: white;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 150px;       
+    height: auto;
+    border-radius: 20px;
+}
+
+.header-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 2px;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Mobiel: logo boven tekst */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* =========================================
+   Content
+========================================= */
+.content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.content-item img {
+    width: clamp(200px, 40%, 350px);
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.content-item p {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+/* Middelste item: afbeelding rechts */
+.content-item:nth-child(2) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* =========================================
+   Contactsectie
+========================================= */
+.contact {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #0077cc;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+/* =========================================
+   Footer
+========================================= */
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* =========================================
+   Responsief
+========================================= */
+@media (max-width: 768px) {
+    .content-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-item:nth-child(2) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-item img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* =========================================
+   Scroll animaties
+========================================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
